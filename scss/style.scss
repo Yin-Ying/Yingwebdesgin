@@ -1,3 +1,22 @@
 body {
   background-color: rgb(134, 192, 76);
 }
+
+header {
+  // 寬度 高度 背景顏色 單位(px)
+  width: 300px;
+  height: 250px;
+  background-color: cyan;
+}
+
+main {
+  width: 600px;
+  height: 450px;
+  background-color: darkgreen;
+}
+
+footer {
+  width: 400px;
+  height: 100px;
+  background-color: deeppink;
+}
