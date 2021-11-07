@@ -1,21 +1,10 @@
-body {
-  background-color: #86c04c;
+* {
+  margin: 0 auto;
+  padding: 0;
 }
 
-header {
-  width: 300px;
-  height: 250px;
-  background-color: cyan;
-}
-
-#main {
-  width: 600px;
-  height: 450px;
-  background-color: darkgreen;
-}
-
-footer {
-  width: 400px;
-  height: 100px;
-  background-color: deeppink;
+@media screen and (max-width: 576px) {
+  header {
+    background-color: cornflowerblue;
+  }
 }
