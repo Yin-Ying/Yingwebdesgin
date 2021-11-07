@@ -4,3 +4,23 @@
 @media screen and(max-width:576px) {
   @import '_02Esmall/01index';
 }
+
+@media screen and (min-width:576) {
+  @import '_03small/01index';
+}
+
+@media screen and (min-width:768) {
+  @import '_04Meduim/01index';
+}
+
+@media screen and (min-width:576) {
+  @import '_05Large/01index'; 
+}
+
+@media screen and (min-width:576) {
+  @import '_06Xlarge/01index';
+}
+
+@media screen and (min-width:576) {
+  @import '_07Xxlarge/01indwx' ;
+}
