@@ -16,40 +16,67 @@
             background-color: rgb(133, 81, 180);
         }
     </style>
-    <!-- 導覽列(nav) 首頁小圖示,FB,會員登入,搜尋列; 項目 清單 ul li-->
-    <nav>
-        <ul class="SubNav">
-        <h1 id="Logo">COCOMANGA</h1>
-        <div class="Icon">
-            <form class="Serch">搜尋</form>
-            <li class="clock">紀錄</li>
-            <li class="Member">會員登入</li>
-        </div> 
-        </ul>
-        
-        <ul class="BtnBox">
-            <li class="Home">首頁</li>
-        <li class="Ranking">排行</li>
-        <li class="Reset">更新</li>
-        <li class="Passionate">熱血</li>
-        <li class="Fantasy">玄幻</li>
-        <li class="Love">戀愛</li>
-        <li class="Adventure">冒險</li>
-        <li class="Message">留言</li>
-        <li class="Add">新增</li>    
-        </ul>  
-    </nav>
-</head>
+   
+    </head>
+
 <!-- 設定背景樣式(行內語法) -->
 <body>
 <!-- html5 響應式網頁架構 頁首(每頁固定) id(唯一) # 主內容 main(隨著項目不同而更動,IE不支援) class .  文章(article)頁尾(每頁固定)footer  -->
 <header>
     <!-- 導覽列(nav) -->
     <nav>
-        
+        <ul class="SubNav">
+            <h1 id="Logo">COCOMANGA</h1>
+            <div class="Icon">
+                <form class="Serch">搜尋</form>
+                <li class="clock">紀錄</li>
+                <li class="Member">會員登入</li>
+            </div> 
+            </ul>
+            
+            <ul class="BtnBox">
+                <li class="Home">首頁</li>
+            <li class="Ranking">排行</li>
+            <li class="Reset">更新</li>
+            <li class="Passionate">熱血</li>
+            <li class="Fantasy">玄幻</li>
+            <li class="Love">戀愛</li>
+            <li class="Adventure">冒險</li>
+            <li class="Message">留言</li>
+            <li class="Add">新增</li>    
+            </ul>  
     </nav>
 </header>
-<article id="main"></article>
-<footer></footer>
+<!-- Javascrip 寫輪播圖建議用ID選擇器命名;css3撰寫用類別選擇器(class)命名或者ID選擇器 -->
+<div id="Banner">
+    <div class="LeftBox">按鈕</div>
+    <div class="Img"></div>
+    <div class="RightBox">按鈕</div>
+</div>
+<article>
+    <article id="Refresh">
+        <h3 > <mark>更新</mark> </h3>
+      </article>
+      <!-- 螢光標記 mark s刪節號-->
+    <article id="Action">
+        <h3 > <mark>熱血</mark> </h3>
+    </article>
+
+    <article id="Loving">
+      <h3><mark>戀愛</mark></h3>
+    </article>
+
+
+  </article>
+<footer>
+     <!-- 版權宣告 行內換行 span-->
+     <p>COCOMANGA &copy; <span id="Year">2021</span></p>
+     <address>
+         <li class="Address">彰化市</li>
+         <li class="Tel">0800092000</li>
+         <li class="Email">yourname@gmail.com</li>
+         <li class="FB">FB</li>
+     </address>
+</footer>
 </body>
 </html>
