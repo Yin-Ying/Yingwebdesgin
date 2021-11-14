@@ -7,8 +7,9 @@
 
 header {
     // 設定寬度
+    // 設定高度 單位為% (未給予基準值，所以無法計算出實際高度)
+    // vh(依照裝置的高度計算，可計算出實際高度)
     width: $w10 * 10;
-    height: 60px;
     background-color: brown;
     nav {
         /*
@@ -18,10 +19,14 @@ header {
         解決辦法
         1.nav 的父框架 header 給予高度;或者是 nav 給予高度
         2.清除浮動狀態，由 nav 設定 
+        3.利用圖片的高展開
         */
         // 靠左排列(與 MenuBtn 同一行
+
         #Logo {
             float: left;
+            // width: $w10*7+5%;
+            @include LBW(7, 5%);
         }
         .SubNav {
             .Icon {
@@ -33,6 +38,7 @@ header {
         #MenuBtn {
             //  浮點對齊法:靠左對齊 float: left
             float: left;
+            width: $w10 * 3;
         }
         .BtnBox {
             @include DN;

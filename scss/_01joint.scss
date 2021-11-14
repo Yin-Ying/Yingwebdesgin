@@ -34,3 +34,7 @@ You may not @extend an outer selector from within @media.
 @mixin Clear {
     clear: both;
 }
+
+@mixin LBW($WM, $WA) {
+    width: $w10 * $WM + $WA;
+}
