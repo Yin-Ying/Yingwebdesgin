@@ -1,13 +1,24 @@
 // 頁面(瀏覽器)與物件間的間距:外間距左右為0,上下自動;內間距為上下左右自動:設定為「*」(總管)
-*{//外間距margin,物件寬度小於100%，物件自動會垂直置中
+* {
+    //外間距margin,物件寬度小於100%，物件自動會垂直置中
     margin: 0 auto;
     //內間距padding
     padding: 0;
 }
-img{
+img {
     // 圖片設定
     width: 100%;
     height: auto;
 }
 // 寬度設定
-$w10:10%;
+$w10: 10%;
+
+// 繼承區:將scss的繼承功能，寫在共用黨內，因般排有誤，故造成編譯時出錯
+/* 
+You may not @extend an outer selector from within @media.
+ You may only @extend selectors within the same directive.
+ 無法在內部選擇器使用外部連結
+*/
+%DN {
+    display: none;
+}
