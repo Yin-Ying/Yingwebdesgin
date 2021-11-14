@@ -8,18 +8,37 @@
 header {
     // 設定寬度
     width: $w10 * 10;
+    height: 60px;
+    background-color: brown;
     nav {
+        /*
+        浮動對齊的問題:
+        1.#Logo 與 .SubNav 物件的父框架 nav 無高度
+        2.nav 的父框架 header 無高度
+        解決辦法
+        1.nav 的父框架 header 給予高度;或者是 nav 給予高度
+        2.清除浮動狀態，由 nav 設定 
+        */
+        // 靠左排列(與 MenuBtn 同一行
+        #Logo {
+            float: left;
+        }
         .SubNav {
             .Icon {
-                // 呼叫
-                @extend %DN;
+                // 呼叫混和函式
+                @include DN;
             }
+        }
+        // 靠左排列(與 Logo 同一行
+        #MenuBtn {
+            //  浮點對齊法:靠左對齊 float: left
+            float: left;
         }
     }
 }
 footer {
     address {
         // 呼叫
-        @extend %DN;
+        @include DN;
     }
 }

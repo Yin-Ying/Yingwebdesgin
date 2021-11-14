@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0 auto;
   padding: 0;
@@ -8,11 +9,111 @@ img {
   height: auto;
 }
 
+/* 
+You may not @extend an outer selector from within @media.
+ You may only @extend selectors within the same directive.
+ 無法在內部選擇器使用外部連結
+*/
 @media screen and (max-width: 576px) {
-  header nav .SubNav .Icon, footer address {
-    display: none;
-  }
   header {
     width: 100%;
+    height: 60px;
+    background-color: brown;
+  }
+  header nav {
+    /*
+        浮動對齊的問題:
+        1.#Logo 與 .SubNav 物件的父框架 nav 無高度
+        2.nav 的父框架 header 無高度
+        解決辦法
+        1.nav 的父框架 header 給予高度;或者是 nav 給予高度
+        2.清除浮動狀態，由 nav 設定 
+        */
+  }
+  header nav #Logo {
+    float: left;
+  }
+  header nav .SubNav .Icon {
+    display: none;
+  }
+  header nav #MenuBtn {
+    float: left;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    width: 100%;
+    background-color: #f08f11;
+  }
+  header nav .SubNav .Icon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    background-color: goldenrod;
+  }
+  header nav .SubNav .Icon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    width: 100%;
+    background-color: royalblue;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+  }
+  header nav #MenuBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    width: 100%;
+    background-color: #41cee1;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+  }
+  header nav #MenuBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  header {
+    width: 100%;
+    background-color: #ec1d73;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+  }
+  header nav #MenuBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
   }
 }

@@ -1,0 +1,18 @@
+header {
+    width: $w10 * 10;
+    background-color: goldenrod;
+    nav {
+        .SubNav {
+            .Icon {
+                // 呼叫混和函式
+                @include DN;
+            }
+        }
+    }
+}
+footer {
+    address {
+        // 呼叫
+        @include DN;
+    }
+}

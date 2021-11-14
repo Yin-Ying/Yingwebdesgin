@@ -22,3 +22,11 @@ You may not @extend an outer selector from within @media.
 %DN {
     display: none;
 }
+// 撰寫 scss的混合函式minxin，修正scss無法被@media使勇的問題
+@mixin DN {
+    display: none;
+}
+// 開啟隱藏物件
+@mixin OB {
+    display: block;
+}

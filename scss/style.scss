@@ -1,26 +1,26 @@
 // 匯入資料
-@import '_01joint.scss';
+@import "_01joint.scss";
 // 利用媒體控制超小型裝置 <576px
 @media screen and(max-width:576px) {
-  @import '_02Esmall/01index';
+    @import "_02Esmall/01index";
 }
-
-@media screen and (min-width:576) {
-  @import '_03small/01index';
+// 小裝置
+@media screen and (min-width: 576px) {
+    @import "_03small/01index";
 }
-
-@media screen and (min-width:768) {
-  @import '_04Meduim/01index';
+// 平板裝置
+@media screen and (min-width: 768px) {
+    @import "_04Meduim/01index";
 }
-
-@media screen and (min-width:576) {
-  @import '_05Large/01index'; 
+// 大平板
+@media screen and (min-width: 992px) {
+    @import "_05Large/01index";
 }
-
-@media screen and (min-width:576) {
-  @import '_06Xlarge/01index';
+// 大螢幕
+@media screen and (min-width: 1200px) {
+    @import "_06Xlarge/01index";
 }
-
-@media screen and (min-width:576) {
-  @import '_07Xxlarge/01indwx' ;
+// 超大螢幕
+@media screen and (min-width: 1400px) {
+    @import "_07Xxlarge/01indwx";
 }
