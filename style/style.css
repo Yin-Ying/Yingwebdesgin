@@ -39,6 +39,12 @@ You may not @extend an outer selector from within @media.
   header nav #MenuBtn {
     float: left;
   }
+  header nav .BtnBox {
+    display: none;
+  }
+  header nav .Clear {
+    clear: both;
+  }
   footer address {
     display: none;
   }

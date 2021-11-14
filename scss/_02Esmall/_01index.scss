@@ -34,6 +34,12 @@ header {
             //  浮點對齊法:靠左對齊 float: left
             float: left;
         }
+        .BtnBox {
+            @include DN;
+        }
+        .Clear {
+            @include Clear;
+        }
     }
 }
 footer {

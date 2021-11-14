@@ -30,3 +30,7 @@ You may not @extend an outer selector from within @media.
 @mixin OB {
     display: block;
 }
+
+@mixin Clear {
+    clear: both;
+}
