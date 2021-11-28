@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- 中文語系 -->
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <!-- 網頁相容性 -->
@@ -13,71 +14,85 @@
     <!-- 內頁標籤 -->
     <style>
     </style>
-   
-    </head>
+
+</head>
 
 <!-- 設定背景樣式(行內語法) -->
+
 <body>
-<!-- html5 響應式網頁架構 頁首(每頁固定) id(唯一) # 主內容 main(隨著項目不同而更動,IE不支援) class .  文章(article)頁尾(每頁固定)footer  -->
-<header>
-    <!-- 導覽列(nav) -->
-    <nav>
-        <ul class="SubNav">
-            <h1 id="Logo">COCOMANGA</h1>
-            <ul class="Icon">
-                <form class="Serch">搜尋</form>
-                <li class="clock">紀錄</li>
-                <li class="Member">會員登入</li>
-            </ul> 
+    <!-- html5 響應式網頁架構 頁首(每頁固定) id(唯一) # 主內容 main(隨著項目不同而更動,IE不支援) class .  文章(article)頁尾(每頁固定)footer  -->
+    <header>
+        <!-- 導覽列(nav) -->
+        <nav>
+            <ul class="SubNav">
+                <h1 id="Logo">COCOMANGA</h1>
+                <ul class="Icon">
+                    <form class="Serch">搜尋</form>
+                    <li class="clock">紀錄</li>
+                    <li class="Member">會員登入</li>
+                </ul>
             </ul>
             <div id="MenuBtn">
                 <img src="images/icon/serch.svg" alt="COCOMANGA漫畫選單" title="COCOMANGA漫畫選單">
             </div>
             <p class="Clear"></p>
+
             <ul class="BtnBox">
                 <li class="Home">首頁</li>
-            <li class="Ranking">排行</li>
-            <li class="Reset">更新</li>
-            <li class="Passionate">熱血</li>
-            <li class="Fantasy">玄幻</li>
-            <li class="Love">戀愛</li>
-            <li class="Adventure">冒險</li>
-            <li class="Message">留言</li>
-            <li class="Add">新增</li>    
-            </ul>  
-    </nav>
-</header>
-<!-- Javascrip 寫輪播圖建議用ID選擇器命名;css3撰寫用類別選擇器(class)命名或者ID選擇器 -->
-<div id="Banner">
-    <div class="LeftBox">按鈕</div>
-    <div class="Img"></div>
-    <div class="RightBox">按鈕</div>
-</div>
-<article>
-    <article id="Refresh">
-        <h3 > <mark>更新</mark> </h3>
-      </article>
-      <!-- 螢光標記 mark s刪節號-->
-    <article id="Action">
-        <h3 > <mark>熱血</mark> </h3>
+                <li class="Ranking">排行</li>
+                <li class="Reset">更新</li>
+                <li class="Passionate">熱血</li>
+                <li class="Fantasy">玄幻</li>
+                <li class="Love">戀愛</li>
+                <li class="Adventure">冒險</li>
+                <li class="Message">留言</li>
+                <li class="Add">新增</li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- Javascrip 寫輪播圖建議用ID選擇器命名;css3撰寫用類別選擇器(class)命名或者ID選擇器 -->
+    <article id="Main">
+        <div id="Banner">
+            <div class="Btn LeftBox"> 〈 </div>
+            <div class="Btn RightBox">〉</div>
+            <ul id="Img">
+
+                <li class="Item01">1</li>
+                <li class="Item02">2</li>
+                <li class="Item03">3</li>
+                <li class="Item04">4</li>
+                <li class="Item05">5</li>
+                <!-- <p>
+                    <img src="images/Banner/006.jpg" alt="">
+                </p> -->
+            </ul>
+
+        </div>
+        <article id="Refresh">
+            <h3> <mark>更新</mark> </h3>
+        </article>
+        <!-- 螢光標記 mark s刪節號-->
+        <article id="Action">
+            <h3> <mark>熱血</mark> </h3>
+        </article>
+
+        <article id="Loving">
+            <h3><mark>戀愛</mark></h3>
+        </article>
+
+
     </article>
-
-    <article id="Loving">
-      <h3><mark>戀愛</mark></h3>
-    </article>
-
-
-  </article>
-<footer>
-     <!-- 版權宣告 行內換行 span-->
-     <p>COCOMANGA &copy; <span id="Year">2021</span></p>
-     <address>
-         
-         <li class="Address">彰化市</li>
-         <li class="Tel">0800092000</li>
-         <li class="Email">yourname@gmail.com</li>
-         <li class="FB">FB</li>
-     </address>
-</footer>
+    <footer>
+        <!-- 版權宣告 行內換行 span-->
+        <p>COCOMANGA &copy; <span id="Year">2021</span></p>
+        <address>
+            <li class="Address">彰化市</li>
+            <li class="Tel">0800092000</li>
+            <li class="Email">yourname@gmail.com</li>
+            <li class="FB">FB</li>
+        </address>
+    </footer>
 </body>
+
 </html>
