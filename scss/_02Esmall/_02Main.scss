@@ -57,5 +57,8 @@
             //  背景圖片 尺忖大小
             background-size: cover;
         }
+        .Item02{
+            @include BPhoto(center, cover, Banner, "004.jpg")
+        }
     }
 }

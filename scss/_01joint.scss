@@ -46,3 +46,18 @@ You may not @extend an outer selector from within @media.
 /* 文字使吋 單位px (固定值) em(百分比，會疊加父框架的值) rem (百分比，不會疊加父框架的值) 
 em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
 $Trem: 1rem;
+
+@mixin  BPhoto( $Position, $Size, $Folder, $IMAGE){
+    // 變數設定 1.對齊$Position 2.尺寸$Size 3.資料夾位置$Folder ；圖片$IMAGE
+    // 問題:路徑無法直接讀取變數名稱
+    // 解答:scss提供的語法，插值寫法(基於javascript 的 es6語法) ，#{自訂名稱(只能英文數字)}
+    // 例如:#{$IMAGE}，寫在路徑上
+    // 背景載入
+    background-image: url(../../images/#{$Folder}/#{$IMAGE});
+    // 不重複
+    background-repeat: no-repeat;
+    // 背景圖片，置中對齊
+    background-position: center;
+    //  背景圖片 尺忖大小
+    background-size: cover;
+}

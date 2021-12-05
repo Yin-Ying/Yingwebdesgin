@@ -1,0 +1,195 @@
+@charset "UTF-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* 
+You may not @extend an outer selector from within @media.
+ You may only @extend selectors within the same directive.
+ 無法在內部選擇器使用外部連結
+*/
+/* 文字使吋 單位px (固定值) em(百分比，會疊加父框架的值) rem (百分比，不會疊加父框架的值) 
+em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
+@media screen and (max-width: 576px) {
+  header {
+    width: 100%;
+    background-color: brown;
+  }
+  header nav {
+    /*
+        浮動對齊的問題:
+        1.#Logo 與 .SubNav 物件的父框架 nav 無高度
+        2.nav 的父框架 header 無高度
+        解決辦法
+        1.nav 的父框架 header 給予高度;或者是 nav 給予高度
+        2.清除浮動狀態，由 nav 設定 
+        3.利用圖片的高展開
+        */
+  }
+  header nav #Logo {
+    float: left;
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav #MenuBtn {
+    float: left;
+    width: 30%;
+    display: none;
+  }
+  header nav .BtnBox {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
+  header nav .Clear {
+    clear: both;
+  }
+  footer address {
+    display: none;
+  }
+  #Main {
+    background-color: blanchedalmond;
+  }
+  #Banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  #Banner .Btn {
+    width: 15vw;
+    height: 12vh;
+    font-size: 2rem;
+    position: absolute;
+    text-align: center;
+    line-height: 12vh;
+    z-index: 5;
+    top: 14vh;
+  }
+  #Banner .LeftBox {
+    background-color: chocolate;
+  }
+  #Banner .RightBox {
+    right: 0;
+    background-color: #055496;
+  }
+  #Banner #Img {
+    width: 100%;
+    background-color: #050592;
+    padding-bottom: 40vh;
+  }
+  #Banner #Img li {
+    width: 100%;
+    float: left;
+    position: absolute;
+    /*移動圖片：因為每部裝置中纖位置不同，所以不易計算
+             margin-left:-200px ;
+             */
+    font-size: 72px;
+    text-align: center;
+    padding-bottom: 26vh;
+  }
+  #Banner #Img .Item01 {
+    background-image: url(../../images/Banner/005.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #Banner #Img .Item02 {
+    background-image: url(../../images/Banner/004.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    width: 100%;
+    background-color: #f08f11;
+  }
+  header nav .SubNav .Icon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    background-color: goldenrod;
+  }
+  header nav .SubNav .Icon {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header {
+    width: 100%;
+    background-color: royalblue;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+  }
+  header nav #MenuBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    width: 100%;
+    background-color: #41cee1;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+  }
+  header nav #MenuBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  header {
+    width: 100%;
+    background-color: #ec1d73;
+  }
+  header nav .SubNav .Icon {
+    display: block;
+  }
+  header nav #MenuBtn {
+    display: none;
+  }
+  footer address {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
