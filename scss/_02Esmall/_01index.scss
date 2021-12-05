@@ -12,6 +12,7 @@ header {
     width: $w10 * 10;
     background-color: brown;
     nav {
+        display: flex;
         /*
         浮動對齊的問題:
         1.#Logo 與 .SubNav 物件的父框架 nav 無高度
@@ -27,26 +28,24 @@ header {
             float: left;
             // width: $w10*7+5%;
             @include LBW(7, 5%);
-            display: flex;
-            @include Dlist;
         }
         .SubNav {
             .Icon {
-                @include OB;
-                display: flex;
+                @include DN;
             }
         }
         // 靠左排列(與 Logo 同一行
         #MenuBtn {
+            height: 60px;
             //  浮點對齊法:靠左對齊 float: left
             float: left;
-            width: $w10 * 3;
-            @include DN;
+            @include LBW(2, 5%);
+            //文字取代圖片，呈現背景圖，而隱藏文字；首行縮排
+            text-indent: -9999px;
+            @include PhoneMnu(center, contain, icon, "serch.svg");
         }
         .BtnBox {
-            @include OB;
-            display: flex;
-            @include Dlist;
+            @include DN;
         }
         .Clear {
             @include Clear;

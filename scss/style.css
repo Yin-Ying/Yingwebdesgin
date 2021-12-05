@@ -75,19 +75,20 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   #Banner .Btn {
     width: 15vw;
     height: 12vh;
-    font-size: 2rem;
+    font-size: 1.2rem;
     position: absolute;
     text-align: center;
     line-height: 12vh;
     z-index: 5;
     top: 14vh;
+    border-radius: 15px;
   }
   #Banner .LeftBox {
-    background-color: chocolate;
+    background-color: rgba(255, 255, 255, 0.25);
   }
   #Banner .RightBox {
     right: 0;
-    background-color: #055496;
+    background-color: rgba(255, 255, 255, 0.25);
   }
   #Banner #Img {
     width: 100%;
@@ -113,6 +114,24 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   }
   #Banner #Img .Item02 {
     background-image: url(../../images/Banner/004.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #Banner #Img .Item03 {
+    background-image: url(../../images/Banner/003.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #Banner #Img .Item04 {
+    background-image: url(../../images/Banner/002.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  #Banner #Img .Item05 {
+    background-image: url(../../images/Banner/001.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

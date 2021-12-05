@@ -8,10 +8,12 @@
 // 小裝置
 @media screen and (min-width: 576px) {
     @import "_03small/01index";
+    @import "_03small/02Main";
 }
 // 平板裝置
 @media screen and (min-width: 768px) {
     @import "_04Meduim/01index";
+    @import "_04Meduim/02Main";
 }
 // 大平板
 @media screen and (min-width: 992px) {

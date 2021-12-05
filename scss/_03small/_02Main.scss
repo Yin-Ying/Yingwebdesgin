@@ -4,6 +4,7 @@
 #Banner {
     $ImagPadding: 335px;
     // 父框架的padding 335px - 子框架的padding 250px = 相差值 $Differ
+    // 父框架padding每增加50px ，相差值增加為5px
     $Differ: 85px;
     .Btn {
         width: 15vw;

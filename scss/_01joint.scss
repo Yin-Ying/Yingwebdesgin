@@ -35,9 +35,21 @@ You may not @extend an outer selector from within @media.
 @mixin Clear {
     clear: both;
 }
-
+// 計算區:計算header李 Logo 與 MenuBtn 之間的寬度
 @mixin LBW($WM, $WA) {
-    width: $w10 * $WM + $WA;
+    // 計算區: 1.設變數(承載值的物件名稱) $WM = 倍數 $WA=加的總數
+    $LogoW: $w10 * $WM + $WA;
+    //MenuBtn寬度 = 父框架的總高度 - Logo寬度
+    $MBW: $w10 * 10 - $LogoW;
+
+    // 連動 計算寬度 Logo 與 MenuBtn
+    // 呼叫 id 或 class標籤
+    #Logo {
+        width: $LogoW;
+    }
+    #MenuBtn {
+        width: $MBW;
+    }
 }
 // 隱藏項目符號
 @mixin Dlist {
@@ -47,7 +59,28 @@ You may not @extend an outer selector from within @media.
 em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
 $Trem: 1rem;
 
-@mixin  BPhoto( $Position, $Size, $Folder, $IMAGE){
+@mixin BPhoto($Position, $Size, $Folder, $IMAGE) {
+    // 變數設定 1.對齊$Position 2.尺寸$Size 3.資料夾位置$Folder ；圖片$IMAGE
+    // 問題:路徑無法直接讀取變數名稱
+    // 解答:scss提供的語法，插值寫法(基於javascript 的 es6語法) ，#{自訂名稱(只能英文數字)}
+    // 例如:#{$IMAGE}，寫在路徑上
+    // 背景載入
+    width: $w10 * 10;
+    background-image: url(../../images/#{$Folder}/#{$IMAGE});
+    // 不重複
+    background-repeat: no-repeat;
+    // 背景圖片，置中對齊
+    background-position: $Position;
+    //  背景圖片 尺忖大小
+    background-size: $Size;
+}
+
+// 圓角矩形，建議單位px
+@mixin Rounded($Num) {
+    border-radius: $Num + px;
+}
+// 手機板專用
+@mixin PhoneMnu($Position, $Size, $Folder, $IMAGE) {
     // 變數設定 1.對齊$Position 2.尺寸$Size 3.資料夾位置$Folder ；圖片$IMAGE
     // 問題:路徑無法直接讀取變數名稱
     // 解答:scss提供的語法，插值寫法(基於javascript 的 es6語法) ，#{自訂名稱(只能英文數字)}
@@ -57,7 +90,7 @@ $Trem: 1rem;
     // 不重複
     background-repeat: no-repeat;
     // 背景圖片，置中對齊
-    background-position: center;
+    background-position: $Position;
     //  背景圖片 尺忖大小
-    background-size: cover;
+    background-size: $Size;
 }
