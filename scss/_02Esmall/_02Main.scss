@@ -1,34 +1,37 @@
 #Main {
-    background-color: blanchedalmond;
-}
-#Banner {
+  background-color: blanchedalmond;
+  margin: {
+    top: 15px;
+    bottom: 10px;
+  }
+  #Banner {
     $ImagPadding: 335px;
     // 父框架的padding 335px - 子框架的padding 250px = 相差值 $Differ
     $Differ: 85px;
     .Btn {
-        width: 15vw;
-        height: 95px;
-        font-size: $Trem * 1.2;
-        // 定位點
-        position: absolute;
-        // 水平置中
-        text-align: center;
-        // 垂直置中 = 行距
-        line-height: 95px;
-        // 移動階層 (圖層)
-        z-index: 5;
-        //左右按鈕，物件往下推算高度:(物件的父框架的高 / 2) - (按鈕高度 / 2) + 單位
-        top: ($ImagPadding / 2) - (95px / 2);
-        @include Rounded(15);
+      width: 15vw;
+      height: 95px;
+      font-size: $Trem * 1.2;
+      // 定位點
+      position: absolute;
+      // 水平置中
+      text-align: center;
+      // 垂直置中 = 行距
+      line-height: 95px;
+      // 移動階層 (圖層)
+      z-index: 5;
+      //左右按鈕，物件往下推算高度:(物件的父框架的高 / 2) - (按鈕高度 / 2) + 單位
+      top: ($ImagPadding / 2) - (95px / 2);
+      @include Rounded(15);
     }
     .LeftBox {
-        left: 2.5vw;
-        background-color: rgba(255, 255, 255, 0.25);
+      left: 2.5vw;
+      background-color: rgba(255, 255, 255, 0.25);
     }
     .RightBox {
-        // 方向 右邊為0(物件靠右);float浮點對齊，配合 上下左右 方向推動
-        right: 2.5vw;
-        background-color: rgba(255, 255, 255, 0.25);
+      // 方向 右邊為0(物件靠右);float浮點對齊，配合 上下左右 方向推動
+      right: 2.5vw;
+      background-color: rgba(255, 255, 255, 0.25);
     }
     width: $w10 * 10;
     // 溢位設定 將超出的可視範圍隱藏
@@ -36,40 +39,133 @@
     // 相對定位
     position: relative;
     #Img {
-        $ImagPadding: 335px;
+      $ImagPadding: 335px;
+      width: $w10 * 10;
+      background-color: rgb(5, 5, 146);
+      // 內間距 設定 下方間距，當成圖片高度，單位為 % or vh
+      padding-bottom: $ImagPadding;
+      li {
         width: $w10 * 10;
-        background-color: rgb(5, 5, 146);
-        // 內間距 設定 下方間距，當成圖片高度，單位為 % or vh
-        padding-bottom: $ImagPadding;
-        li {
-            width: $w10 * 10;
-            float: left;
-            // 定位點 絕對定位：單獨呼叫時，原點(0,0)會位於畫面(可視範圍)的左上角
-            // 物件的副框架呼叫，相對定位(position: relative)時，功能設為「重新定位原點至父框架」
-            position: absolute;
-            /*移動圖片：因為每部裝置中纖位置不同，所以不易計算
-             margin-left:-200px ;
-             */
-            font-size: 72px;
-            text-align: center;
-            // 內間距 設定 下方間距，當成圖片高度，單位為 % or vh, (會谁著裝置而改變)
-            //
-            padding-bottom: $ImagPadding - $Differ;
-        }
-        .Item01 {
-            @include BPhoto(center, cover, Banner, "005.jpg");
-        }
-        .Item02 {
-            @include BPhoto(center, cover, Banner, "004.jpg");
-        }
-        .Item03 {
-            @include BPhoto(center, cover, Banner, "003.jpg");
-        }
-        .Item04 {
-            @include BPhoto(center, cover, Banner, "002.jpg");
-        }
-        .Item05 {
-            @include BPhoto(center, cover, Banner, "001.jpg");
-        }
+        float: left;
+        // 定位點 絕對定位：單獨呼叫時，原點(0,0)會位於畫面(可視範圍)的左上角
+        // 物件的副框架呼叫，相對定位(position: relative)時，功能設為「重新定位原點至父框架」
+        position: absolute;
+        /*移動圖片：因為每部裝置中纖位置不同，所以不易計算
+               margin-left:-200px ;
+               */
+        font-size: 72px;
+        text-align: center;
+        // 內間距 設定 下方間距，當成圖片高度，單位為 % or vh, (會谁著裝置而改變)
+        //
+        padding-bottom: $ImagPadding - $Differ;
+      }
+      .Item01 {
+        @include BPhoto(center, cover, Banner, "005.jpg");
+      }
+      .Item02 {
+        @include BPhoto(center, cover, Banner, "004.jpg");
+      }
+      .Item03 {
+        @include BPhoto(center, cover, Banner, "003.jpg");
+      }
+      .Item04 {
+        @include BPhoto(center, cover, Banner, "002.jpg");
+      }
+      .Item05 {
+        @include BPhoto(center, cover, Banner, "001.jpg");
+      }
     }
+  }
+  > #Refresh {
+    //   設定外間距
+    margin: {
+      top: 15px;
+      bottom: 15px;
+    }
+    width: $w10 * 8.5;
+
+    display: flex;
+    // 換行
+    flex-wrap: wrap;
+    > h3 {
+      padding: {
+        top: 15px;
+        bottom: 15px;
+      }
+    }
+    > #reFresh {
+      width: $w * 7;
+
+      text-align: left;
+    }
+    > #More {
+    }
+    > #Svg {
+      background-color: yellowgreen;
+      width: 280px;
+      height: 230px;
+      //   圓角矩形，邊框設定轉角角度
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  > #Action {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    > h3 {
+      padding: {
+        top: 15px;
+        bottom: 15px;
+      }
+    }
+    > #Motion {
+      width: $w10 * 8;
+      text-align: left;
+    }
+    > #Further {
+      text-align: right;
+    }
+    > #Jpeg {
+      background-color: rosybrown;
+      width: 280px;
+      height: 230px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  > #Loving {
+    width: $w10 * 8.5;
+    display: flex;
+    flex-wrap: wrap;
+    // 文字左右對齊
+    // text-align: justify;
+    > h3 {
+      padding: {
+        top: 15px;
+        bottom: 15px;
+      }
+    }
+
+    > #Amativeness {
+      width: $w10 * 8;
+      text-align: left;
+    }
+
+    > #Still {
+      width: $w10 * 2;
+      text-align: right;
+    }
+    > #Image {
+      background-color: purple;
+      width: 280px;
+      height: 230px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+> footer {
+  padding-top: 10px;
 }

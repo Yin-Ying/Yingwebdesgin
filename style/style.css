@@ -73,13 +73,15 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   }
   #Main {
     background-color: blanchedalmond;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
-  #Banner {
+  #Main #Banner {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
-  #Banner .Btn {
+  #Main #Banner .Btn {
     width: 15vw;
     height: 95px;
     font-size: 1.2rem;
@@ -90,64 +92,145 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     top: 120px;
     border-radius: 15px;
   }
-  #Banner .LeftBox {
+  #Main #Banner .LeftBox {
     left: 2.5vw;
     background-color: rgba(255, 255, 255, 0.25);
   }
-  #Banner .RightBox {
+  #Main #Banner .RightBox {
     right: 2.5vw;
     background-color: rgba(255, 255, 255, 0.25);
   }
-  #Banner #Img {
+  #Main #Banner #Img {
     width: 100%;
     background-color: #050592;
     padding-bottom: 335px;
   }
-  #Banner #Img li {
+  #Main #Banner #Img li {
     width: 100%;
     float: left;
     position: absolute;
     /*移動圖片：因為每部裝置中纖位置不同，所以不易計算
-             margin-left:-200px ;
-             */
+               margin-left:-200px ;
+               */
     font-size: 72px;
     text-align: center;
     padding-bottom: 250px;
   }
-  #Banner #Img .Item01 {
+  #Main #Banner #Img .Item01 {
     width: 100%;
     background-image: url(../../images/Banner/005.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-  #Banner #Img .Item02 {
+  #Main #Banner #Img .Item02 {
     width: 100%;
     background-image: url(../../images/Banner/004.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-  #Banner #Img .Item03 {
+  #Main #Banner #Img .Item03 {
     width: 100%;
     background-image: url(../../images/Banner/003.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-  #Banner #Img .Item04 {
+  #Main #Banner #Img .Item04 {
     width: 100%;
     background-image: url(../../images/Banner/002.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
-  #Banner #Img .Item05 {
+  #Main #Banner #Img .Item05 {
     width: 100%;
     background-image: url(../../images/Banner/001.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+  #Main > #Refresh {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #Main > #Refresh > h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #Main > #Refresh > #reFresh {
+    width: 70vw;
+    text-align: left;
+  }
+  #Main > #Refresh > #Svg {
+    background-color: yellowgreen;
+    width: 280px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  #Main > #Action {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #Main > #Action > h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #Main > #Action > #Motion {
+    width: 80%;
+    text-align: left;
+  }
+  #Main > #Action > #Further {
+    text-align: right;
+  }
+  #Main > #Action > #Jpeg {
+    background-color: rosybrown;
+    width: 280px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  #Main > #Loving {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #Main > #Loving > h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #Main > #Loving > #Amativeness {
+    width: 80%;
+    text-align: left;
+  }
+  #Main > #Loving > #Still {
+    width: 20%;
+    text-align: right;
+  }
+  #Main > #Loving > #Image {
+    background-color: purple;
+    width: 280px;
+    height: 230px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  > footer {
+    padding-top: 10px;
   }
 }
 
