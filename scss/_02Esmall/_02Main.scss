@@ -87,26 +87,35 @@
     display: flex;
     // 換行
     flex-wrap: wrap;
-    > h3 {
-      padding: {
-        top: 15px;
-        bottom: 15px;
-      }
-    }
     > #reFresh {
-      width: $w * 7;
+      width: $w10 * 7;
 
       text-align: left;
     }
     > #More {
+      padding: 2px;
+      > a {
+        padding: 15px, 40px;
+        display: inline-block;
+        background-color: rosybrown;
+        border-radius: 20px;
+        // 消除隱藏線
+        text-decoration: none;
+      }
     }
     > #Svg {
-      background-color: yellowgreen;
-      width: 280px;
-      height: 230px;
+      width: $w10 * 8;
       //   圓角矩形，邊框設定轉角角度
       border-radius: 10px;
       margin-bottom: 10px;
+      > a {
+        > img {
+          border-radius: 15px;
+          border: 1px solid rgb(66, 4, 4);
+          // x Y 模糊 顏色
+          box-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 0.25);
+        }
+      }
     }
   }
   > #Action {
