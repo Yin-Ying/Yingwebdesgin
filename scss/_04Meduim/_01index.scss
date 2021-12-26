@@ -1,19 +1,19 @@
 header {
-    width: $w10 * 10;
-    background-color: goldenrod;
-    nav {
-        .SubNav {
-            display: flex;
-            .Icon {
-                // 呼叫混和函式
-                @include OB;
-            }
-        }
+  width: $w10 * 10;
+  background-color: goldenrod;
+  #MainNav {
+    .SubNav {
+      display: flex;
+      .Icon {
+        // 呼叫混和函式
+        @include OB;
+      }
     }
+  }
 }
 footer {
-    address {
-        // 呼叫
-        @include OB;
-    }
+  address {
+    // 呼叫
+    @include OB;
+  }
 }

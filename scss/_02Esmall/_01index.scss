@@ -6,14 +6,20 @@
 // }
 
 header {
-    // 設定寬度
-    // 設定高度 單位為% (未給予基準值，所以無法計算出實際高度)
-    // vh(依照裝置的高度計算，可計算出實際高度)
-    width: $w10 * 10;
-    background-color: brown;
-    nav {
-        display: flex;
-        /*
+  // 設定寬度
+  // 設定高度 單位為% (未給予基準值，所以無法計算出實際高度)
+  // vh(依照裝置的高度計算，可計算出實際高度)
+  width: $w10 * 10;
+  background-color: brown;
+  #MainNav {
+    width: 100%;
+    //   定位點 停佇
+    position: fixed;
+    //   靠上
+    top: 0;
+    z-index: 999;
+    background-color: wheat;
+    /*
         浮動對齊的問題:
         1.#Logo 與 .SubNav 物件的父框架 nav 無高度
         2.nav 的父框架 header 無高度
@@ -22,39 +28,94 @@ header {
         2.清除浮動狀態，由 nav 設定 
         3.利用圖片的高展開
         */
-        // 靠左排列(與 MenuBtn 同一行
+    // 靠左排列(與 MenuBtn 同一行
+    .SubNav {
+      width: 100%;
 
-        #Logo {
-            float: left;
-            // width: $w10*7+5%;
-            @include LBW(7, 5%);
-        }
-        .SubNav {
-            .Icon {
-                @include DN;
-            }
-        }
-        // 靠左排列(與 Logo 同一行
-        #MenuBtn {
-            height: 60px;
-            //  浮點對齊法:靠左對齊 float: left
-            float: left;
-            @include LBW(2, 5%);
-            //文字取代圖片，呈現背景圖，而隱藏文字；首行縮排
-            text-indent: -9999px;
-            @include PhoneMnu(center, contain, icon, "serch.svg");
-        }
-        .BtnBox {
-            @include DN;
-        }
-        .Clear {
-            @include Clear;
-        }
+      display: flex;
+
+      #Logo {
+        @include LBW(8, 0);
+      }
+      .Icon {
+        background-color: bisque;
+        @include LBW(2, 0);
+
+        @include OB;
+        @include Dlist;
+      }
     }
+    // 靠左排列(與 Logo 同一行
+    #MenuBtn {
+      height: 60px;
+      //  浮點對齊法:靠左對齊 float: left
+      float: left;
+      @include LBW(2, 5%);
+      //   //文字取代圖片，呈現背景圖，而隱藏文字；首行縮排
+      text-indent: -9999px;
+      @include PhoneMnu(center, contain, icon, "serch.svg");
+    }
+    .BtnBox {
+      @include DN;
+    }
+    .Clear {
+      @include Clear;
+    }
+  }
+  #MenuNav {
+    @include DN;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    > #Close {
+      @include Dlist;
+      width: 40px;
+      height: 40px;
+      background-color: yellowgreen;
+      top: 10px;
+      right: 10px;
+      // 定位點浮動
+      position: absolute;
+    }
+    > h1 {
+      background-color: greenyellow;
+      width: 100%;
+      height: 110px;
+      text-align: center;
+      line-height: 110px;
+    }
+    > ul {
+      // 相對位置
+      position: relative;
+      width: $w10 * 9;
+      background-color: hotpink;
+      top: 50%;
+
+      margin: {
+        top: -100px;
+      }
+      display: flex;
+      flex-wrap: wrap;
+      @include Dlist;
+      > .item {
+        width: $w10 * 10 / 3 - 3;
+
+        margin: {
+          top: 10px;
+          bottom: 10px;
+        }
+      }
+    }
+  }
 }
 footer {
-    address {
-        // 呼叫
-        @include DN;
-    }
+  address {
+    // 呼叫
+    @include DN;
+  }
 }

@@ -1,10 +1,10 @@
 #Main {
   background-color: blanchedalmond;
-  margin: {
-    top: 15px;
-    bottom: 10px;
-  }
+
   #Banner {
+    margin: {
+      top: 120px;
+    }
     $ImagPadding: 335px;
     // 父框架的padding 335px - 子框架的padding 250px = 相差值 $Differ
     $Differ: 85px;
@@ -173,8 +173,4 @@
       margin-bottom: 10px;
     }
   }
-}
-
-> footer {
-  padding-top: 10px;
 }

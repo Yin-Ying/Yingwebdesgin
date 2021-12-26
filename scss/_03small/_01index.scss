@@ -1,18 +1,18 @@
 header {
-    width: $w10 * 10;
-    background-color: rgb(240, 143, 17);
-    nav {
-        .SubNav {
-            .Icon {
-                // 呼叫混和函式
-                @include DN;
-            }
-        }
+  width: $w10 * 10;
+  background-color: rgb(240, 143, 17);
+  > #MainNav {
+    .SubNav {
+      .Icon {
+        // 呼叫混和函式
+        @include DN;
+      }
     }
+  }
 }
 footer {
-    address {
-        // 呼叫
-        @include DN;
-    }
+  address {
+    // 呼叫
+    @include DN;
+  }
 }

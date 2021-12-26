@@ -1,20 +1,20 @@
 header {
-    width: $w10 * 10;
-    background-color: rgb(65, 206, 225);
-    nav {
-        .SubNav {
-            .Icon {
-                @include OB;
-            }
-        }
-        #MenuBtn {
-            display: none;
-        }
+  width: $w10 * 10;
+  background-color: rgb(65, 206, 225);
+  #MainNav {
+    .SubNav {
+      .Icon {
+        @include OB;
+      }
     }
+    #MenuBtn {
+      display: none;
+    }
+  }
 }
 footer {
-    address {
-        // 呼叫
-        @include DN;
-    }
+  address {
+    // 呼叫
+    @include DN;
+  }
 }

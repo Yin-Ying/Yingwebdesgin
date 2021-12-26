@@ -28,10 +28,12 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 100%;
     background-color: brown;
   }
-  header nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  header #MainNav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: wheat;
     /*
         浮動對齊的問題:
         1.#Logo 與 .SubNav 物件的父框架 nav 無高度
@@ -42,19 +44,30 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
         3.利用圖片的高展開
         */
   }
-  header nav #Logo {
-    float: left;
+  header #MainNav .SubNav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  header nav #Logo #Logo {
-    width: 75%;
+  header #MainNav .SubNav #Logo #Logo {
+    width: 80%;
   }
-  header nav #Logo #MenuBtn {
-    width: 25%;
+  header #MainNav .SubNav #Logo #MenuBtn {
+    width: 20%;
   }
-  header nav .SubNav .Icon {
-    display: none;
+  header #MainNav .SubNav .Icon {
+    background-color: bisque;
+    display: block;
+    list-style-type: none;
   }
-  header nav #MenuBtn {
+  header #MainNav .SubNav .Icon #Logo {
+    width: 20%;
+  }
+  header #MainNav .SubNav .Icon #MenuBtn {
+    width: 80%;
+  }
+  header #MainNav #MenuBtn {
     height: 60px;
     float: left;
     text-indent: -9999px;
@@ -63,27 +76,71 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     background-position: center;
     background-size: contain;
   }
-  header nav #MenuBtn #Logo {
+  header #MainNav #MenuBtn #Logo {
     width: 25%;
   }
-  header nav #MenuBtn #MenuBtn {
+  header #MainNav #MenuBtn #MenuBtn {
     width: 75%;
   }
-  header nav .BtnBox {
+  header #MainNav .BtnBox {
     display: none;
   }
-  header nav .Clear {
+  header #MainNav .Clear {
     clear: both;
+  }
+  header #MenuNav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 9999;
+    background-color: white;
+    position: fixed;
+    top: 0;
+  }
+  header #MenuNav > #Close {
+    list-style-type: none;
+    width: 40px;
+    height: 40px;
+    background-color: yellowgreen;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
+  header #MenuNav > h1 {
+    background-color: greenyellow;
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    line-height: 110px;
+  }
+  header #MenuNav > ul {
+    position: relative;
+    width: 90%;
+    background-color: hotpink;
+    top: 50%;
+    margin-top: -100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style-type: none;
+  }
+  header #MenuNav > ul > .item {
+    width: 30.33333%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   footer address {
     display: none;
   }
   #Main {
     background-color: blanchedalmond;
-    margin-top: 15px;
-    margin-bottom: 10px;
   }
   #Main #Banner {
+    margin-top: 120px;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -246,9 +303,6 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     border-radius: 10px;
     margin-bottom: 10px;
   }
-  > footer {
-    padding-top: 10px;
-  }
 }
 
 @media screen and (min-width: 576px) {
@@ -256,7 +310,7 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 100%;
     background-color: #f08f11;
   }
-  header nav .SubNav .Icon {
+  header > #MainNav .SubNav .Icon {
     display: none;
   }
   footer address {
@@ -347,12 +401,12 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 100%;
     background-color: goldenrod;
   }
-  header nav .SubNav {
+  header #MainNav .SubNav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  header nav .SubNav .Icon {
+  header #MainNav .SubNav .Icon {
     display: block;
   }
   footer address {
@@ -365,10 +419,10 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 100%;
     background-color: royalblue;
   }
-  header nav .SubNav .Icon {
+  header #MainNav .SubNav .Icon {
     display: block;
   }
-  header nav #MenuBtn {
+  header #MainNav #MenuBtn {
     display: none;
   }
   footer address {
@@ -381,10 +435,10 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 100%;
     background-color: #41cee1;
   }
-  header nav .SubNav .Icon {
+  header #MainNav .SubNav .Icon {
     display: block;
   }
-  header nav #MenuBtn {
+  header #MainNav #MenuBtn {
     display: none;
   }
   footer address {
@@ -397,10 +451,10 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 100%;
     background-color: #ec1d73;
   }
-  header nav .SubNav .Icon {
+  header #MainNav .SubNav .Icon {
     display: block;
   }
-  header nav #MenuBtn {
+  header #MainNav #MenuBtn {
     display: none;
   }
   footer address {
