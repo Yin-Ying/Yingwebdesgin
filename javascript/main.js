@@ -104,7 +104,10 @@ function whilecode(){
         }else {
             console.log("產生亂數為:" + attack);
             number=number - attack;
-        }     
+        }  
+        while (number < 0){
+            number=number - number;
+        }  
           
         console.log("計算結果為:" + number);
     }
