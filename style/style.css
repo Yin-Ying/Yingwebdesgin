@@ -83,13 +83,15 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     width: 75%;
   }
   header #MainNav .BtnBox {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
   }
   header #MainNav .Clear {
     clear: both;
   }
   header #MenuNav {
-    display: none;
     width: 100%;
     height: 100%;
     overflow: hidden;

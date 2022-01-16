@@ -1,114 +1,63 @@
-// 設計方法function name(){程式}
-// 瀏覽器console控板
-// 宣告變數var es6版本 let(變數) const(常數)
-
-// Testcode();
-
-// TimeYear();
-
-function Testcode(){
-    var a=1;
-    var b="01";
-    console.log(a);
-    console.log(b);
-    console.log("01");
-    
-    var b =12;
-    if (b > 10) console.log("數字大於10");
-    
-    if (b > 10)
-        console.log("數字為:" + b);
-    var a = 8
-        if (a > b)
-            console.log("a > b成立");
-        else
-            console.log("a > b不成立");
-            let aa=1;
-            let bb=2;
-            if (aa==bb){console.log("兩數箱等");}
-            
-            else if (aa > bb){
-                console.log( aa + "大於" + bb);
-            }
-            
-            else{
-                console.log("都不成立");
-            };
-            
-}
 function TimeYear(){
-    // 宣告年分
-    // 日期函數 Date
-    var Year = new Date().getFullYear();
-    // var Year="2022";
-    // 由html顯示資料
+    var Year = new Date().getFullYear();  
     document.getElementById('Year').textContent = Year;
 }
-// Var_Letcode();
-var a=1;
-let b=2;
-function Var_Letcode(){
-   // var與let差異 var 除了在function內有全域與區域的分別； let 都有分別
-var c= 5, d=6;
-let x= 4, y=7;
-{
-    var e = c + d;
-    let z = x + y;
-}
-console.log(e);
-console.log(z);
-function Numcode(){
-    var e = c + d;
-    let z = x + y;
-}
-} 
-let i =1;
-for(i=0;i<=10;i+=1){
-    console.log(i);
-}
-// login();
-function login(){
-    let User;
-    let Number;
-    //帳號 
-    let i;
-    let usertext ='YinYing';
-    // 密碼
-    let passwd ='12345';
-    User = window.prompt('請輸入帳號');
-    if (User != usertext){
-        for(i == User;i <=2;i+=1){
-            console.log("");
-        }
-        if ( Number == passwd){
-            console.log("歡迎登入");
-        }else{
-            console.log("帳號密碼錯誤");
-        }
-    }else{
-        Number = window.prompt('請輸入密碼');
-        
-    }
+CoppyRightContent();
+function CoppyRightContent() {
+    // 宣告變數 在 html 內新增 div 標籤
+    let div = document.createElement('div');
 
+    // 宣告變數 在哪個html 標籤之內新增 div 
+    let Footer = document.getElementById('Footer');
+
+    // 在 footer 內新增div 子元素
+    Footer.appendChild(div);
+
+    // html語法 若樣使用 id 或 class 請用單引號包覆
+    div.innerHTML='"COCOMANGA &copy;版權宣告2020 - <span id="Year">2022</span>"';
+    TimeYear();
+    // 移動位置
+    let Address = document.getElementById('Address');
+    
+    // 在被選取的元素之前插入內容 before() 置入被選取元素之前
+    Address.before(div);
 }
-whilecode();
-function whilecode(){
-     let count =1;
-    let number=200;
-    while (number > 0) {
-        console.log("第" + count + "次")
-        count+=1;
-        let attack=Math.floor(Math.random()*31);
-        if (attack < 10 ){
-            number=number;
-        }else {
-            console.log("產生亂數為:" + attack);
-            number=number - attack;
-        }  
-        while (number < 0){
-            number=number - number;
-        }  
-          
-        console.log("計算結果為:" + number);
-    }
+SmallNavcon();
+function SmallNavcon(){
+    // 薪資標籤 ul與li
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+
+    // 建立ul框架,給予 id 名稱
+    let SN =document.getElementById('SmallNav');
+    SN.appendChild(ul);
+
+    //賦予屬性id or class 
+     ul.setAttribute("id","PhoneNav");
+
+    // li.setAttribute("class","About");
+  
+  let NavClass= ["About","VerticalLine","Shop","VerticalLine","Message","VerticalLine","Address"];
+  for (i=0; i < NavClass.length; i++ ){
+    let li = document.createElement('li');
+    li.setAttribute("class",NavClass[i]);
+    ul.appendChild(li);
+    let A = document.createElement('a');
+    li.appendChild(A);
+    A.setAttribute("href","javascript:;");
+    let Item = ["品牌故事","|","購物說明","|","客服留言","|","門市資訊"];
+    li.innerText= Item[i];
+  }
+    // MenuNav();
+  function MenuNav() {
+      let MenuNav = document.getElementById('MenuNav');
+      MenuNav.style.display = "none";
+  }
+  
+   Pageload();
+   function Pageload(){
+       $('header').load("../web/web.html");
+   }
 }
+
+ 
