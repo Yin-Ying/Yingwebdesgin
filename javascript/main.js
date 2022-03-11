@@ -56,7 +56,7 @@ function SmallNavcon(){
   
    Pageload();
    function Pageload(){
-       $('header').load("../web/web.html");
+       $('header').load("web/web.html");
    }
 }
 

@@ -56,8 +56,8 @@
         font-size: 72px;
         text-align: center;
         // 內間距 設定 下方間距，當成圖片高度，單位為 % or vh, (會谁著裝置而改變)
-        //
-        padding-bottom: $ImagPadding - $Differ;
+        //子框架 Padding = 父框架的 Padding - 相差值 $Differ
+        padding-bottom: $ImagPadding;
       }
       .Item01 {
         @include BPhoto(center, cover, Banner, "005.jpg");
