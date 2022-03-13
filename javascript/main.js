@@ -48,16 +48,15 @@ function SmallNavcon(){
     let Item = ["品牌故事","|","購物說明","|","客服留言","|","門市資訊"];
     li.innerText= Item[i];
   }
-    // MenuNav();
+}
+// MenuNav();
   function MenuNav() {
-      let MenuNav = document.getElementById('MenuNav');
-      MenuNav.style.display = "none";
+  let MenuNav = document.getElementById('MenuNav');
+  MenuNav.style.display = "none";
   }
-  
-   Pageload();
+  Pageload();
    function Pageload(){
        $('header').load("web/web.html");
    }
-}
 
  
