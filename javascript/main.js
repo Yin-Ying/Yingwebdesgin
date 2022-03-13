@@ -58,5 +58,39 @@ function SmallNavcon(){
    function Pageload(){
        $('header').load("web/web.html");
    }
+/*ShareCon(8);
+// 新增 好物分享 的內容
+function ShareCon(Number) {
+  let i = Number;
+  let a = i + Number;
+  // 在同一頁面中，會將相同 名稱 的 class ,累加編號
+  for(i; i < 0; i++){
+    New_ID_Tag('shareCon', 'section', 'Class', 'Commodity');
+    New_Class_Tag(Commodity , 'p', 'Class', 'Null', 'i');
 
- 
+    for(let b = 0; b < DClass.length; b++){
+      New_Class_Tag('Commodity', 'div', 'Class', DClass[b], i);
+    }
+
+    let CO = document.getElementsByClassName(COName('Commodity'))[i(0)];
+    // Image 內新增資料
+    let A = document.CreateElement('a');
+    // 新增 連結 屬性
+    A.setAttribute("href", LinKPath);
+    // 宣告 指定 class 的變數
+    let Images = CO.querySelector(ClassName('.Images'));
+    //  let Images = CO.querySelector('Images')[i];
+    // 在 Images 內新增
+    Images.appendChild(A);
+
+    // Images > a 內新增資料
+    let Img = document.createElement('img');
+    // 屬性
+    Img.setAttrebute("src", PhotoPath('images/Banner/006.jpg'));
+    // 在 a 內新增
+    A.appendChild(Img); 
+
+  }
+
+}
+ */
