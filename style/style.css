@@ -161,8 +161,9 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     text-align: center;
     line-height: 95px;
     z-index: 5;
-    top: 120px;
+    top: 40%;
     border-radius: 15px;
+    cursor: pointer;
   }
   #Main #Banner .LeftBox {
     left: 2.5vw;
