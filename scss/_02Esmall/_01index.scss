@@ -116,6 +116,16 @@ header {
   }
 }
 footer {
+  
+  > #SmallNav{
+    padding: 5px;
+    // background-color: aqua;
+    text-align: center;
+    > #PhoneNav{
+      display: flex;
+      list-style-type: none;
+    }
+  }
   address {
     // 呼叫
     @include DN;

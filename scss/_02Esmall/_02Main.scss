@@ -4,6 +4,7 @@
   #Banner {
     margin: {
       top: 120px;
+      
     }
     $ImagPadding: 335px;
     // 父框架的padding 335px - 子框架的padding 250px = 相差值 $Differ
@@ -11,6 +12,7 @@
     .Btn {
       width: 15vw;
       height: 95px;
+
       font-size: $Trem * 1.2;
       // 定位點
       position: absolute;

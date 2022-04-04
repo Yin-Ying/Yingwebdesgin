@@ -141,6 +141,16 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  footer > #SmallNav {
+    padding: 5px;
+    text-align: center;
+  }
+  footer > #SmallNav > #PhoneNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+  }
   footer address {
     display: none;
   }
