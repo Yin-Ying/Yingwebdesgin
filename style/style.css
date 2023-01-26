@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 * {
   margin: 0 auto;
   padding: 0;
@@ -137,7 +136,7 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     list-style-type: none;
   }
   header #MenuNav > ul > .item {
-    width: 30.33333%;
+    width: 30.3333333333%;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -185,7 +184,7 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   }
   #Main #Banner #Img {
     width: 100%;
-    background-color: #050592;
+    background-color: rgb(5, 5, 146);
     padding-bottom: 335px;
   }
   #Main #Banner #Img li {
@@ -193,8 +192,8 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     float: left;
     position: absolute;
     /*移動圖片：因為每部裝置中纖位置不同，所以不易計算
-               margin-left:-200px ;
-               */
+           margin-left:-200px ;
+           */
     font-size: 72px;
     text-align: center;
     padding-bottom: 335px;
@@ -265,7 +264,7 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   }
   #Main > #Refresh > #Svg > a > img {
     border-radius: 15px;
-    border: 1px solid #420404;
+    border: 1px solid rgb(66, 4, 4);
     -webkit-box-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 0.25);
             box-shadow: 2.5px 2.5px 2px rgba(0, 0, 0, 0.25);
   }
@@ -338,11 +337,10 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     background-color: burlywood;
   }
 }
-
 @media screen and (min-width: 576px) {
   header {
     width: 100%;
-    background-color: #f08f11;
+    background-color: rgb(240, 143, 17);
   }
   header > #MainNav .SubNav .Icon {
     display: none;
@@ -379,7 +377,7 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   }
   #Banner #Img {
     width: 100%;
-    background-color: #050592;
+    background-color: rgb(5, 5, 146);
     padding-bottom: 335px;
   }
   #Banner #Img li {
@@ -387,8 +385,8 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     float: left;
     position: absolute;
     /*移動圖片：因為每部裝置中纖位置不同，所以不易計算
-             margin-left:-200px ;
-             */
+     margin-left:-200px ;
+     */
     font-size: 72px;
     text-align: center;
     padding-bottom: 250px;
@@ -429,7 +427,6 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     background-size: cover;
   }
 }
-
 @media screen and (min-width: 768px) {
   header {
     width: 100%;
@@ -447,7 +444,6 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     display: block;
   }
 }
-
 @media screen and (min-width: 992px) {
   header {
     width: 100%;
@@ -463,11 +459,10 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     display: none;
   }
 }
-
 @media screen and (min-width: 1200px) {
   header {
     width: 100%;
-    background-color: #41cee1;
+    background-color: rgb(65, 206, 225);
   }
   header #MainNav .SubNav .Icon {
     display: block;
@@ -479,11 +474,10 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
     display: none;
   }
 }
-
 @media screen and (min-width: 1400px) {
   header {
     width: 100%;
-    background-color: #ec1d73;
+    background-color: rgb(236, 29, 115);
   }
   header #MainNav .SubNav .Icon {
     display: block;
@@ -494,4 +488,4 @@ em 基礎為1em = 16px； rem 基礎為1rem = 16px*/
   footer address {
     display: none;
   }
-}
+}/*# sourceMappingURL=style.css.map */
